@@ -1,0 +1,1 @@
+public interface EncodableDecodable extends Encodable, Decodable {}
