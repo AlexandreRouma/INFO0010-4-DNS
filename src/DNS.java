@@ -45,6 +45,11 @@ public class DNS {
         // Close socket
         sock.close();
 
+        // If error, throw
+        if (rmsg.rcode != ResponseCode.SUCCESS) {
+            throw new Exception(String.format("Received non-successful response code: %s", rmsg.rcode));
+        }
+
         return rmsg.answers;
     }
 }

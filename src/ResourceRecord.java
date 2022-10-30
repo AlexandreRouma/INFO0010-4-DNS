@@ -31,7 +31,11 @@ public class ResourceRecord implements Encodable, Decodable {
                 break;
             case CNAME:
             case NS:
+            case PTR:
                 record = new Name(msgBuf);
+                break;
+            case MX:
+                record = new MX(msgBuf);
                 break;
             case TXT:
                 record = new Text(msgBuf);
@@ -44,7 +48,7 @@ public class ResourceRecord implements Encodable, Decodable {
     }
     
     public String toString() {
-        return String.format("(TYPE=%s, TTL=%d, DATA=\"%s\")", type.name(), ttl, record);
+        return String.format("(TYPE=%s, TTL=%d, DATA=\"%s\")", type, ttl, record);
     }
 
     public int getSize() {

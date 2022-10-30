@@ -34,11 +34,12 @@ public class Pointer {
     }
 
     public static boolean isPointer(ByteBuffer buf) {
-        return (buf.getShort(buf.position()) & MASK) == SIGNATURE;
+        return (buf.get(buf.position()) & BYTE_MASK) == BYTE_SIGNATURE;
     }
 
     public static final int SIZE = 2;
     public static final short SIGNATURE = (short)0xC000;
+    public static final byte BYTE_SIGNATURE = (byte)0xC0;
     public static final short MASK = (short)0xC000;
     public static final byte BYTE_MASK = (byte)0xC0;
     public short index;
