@@ -1,8 +1,0 @@
-<map id="dns.ResourceRecord.serialize" name="dns.ResourceRecord.serialize">
-<area shape="rect" id="node1" title=" " alt="" coords="5,56,219,83"/>
-<area shape="rect" id="node2" href="$interfacedns_1_1_protocol_object.html#a2cb1b776546112bb4dec4faf1aca3eae" title=" " alt="" coords="521,5,717,32"/>
-<area shape="rect" id="node3" href="$classdns_1_1_resource_record.html#a878c8d42d04bfe27645dbfd73738bb07" title=" " alt="" coords="267,31,473,57"/>
-<area shape="rect" id="node4" href="$interfacedns_1_1_protocol_object.html#a54412a59abc51937310fb6098fb4fd13" title=" " alt="" coords="269,81,471,108"/>
-<area shape="rect" id="node5" href="$classdns_1_1_name.html#a987c6c3e5ed0847b77a00bba2554db04" title=" " alt="" coords="297,132,443,159"/>
-<area shape="rect" id="node6" href="$classdns_1_1_name.html#a6de36e4c87968a8cc5e07eb626790ce3" title=" " alt="" coords="549,132,689,159"/>
-</map>

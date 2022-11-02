@@ -1,4 +1,0 @@
-var searchData=
-[
-  ['deserialize_44',['deserialize',['../classdns_1_1_i_p_address.html#a414bda9cd74e2455a88df9802cea9edb',1,'dns.IPAddress.deserialize()'],['../classdns_1_1_message.html#a5e72127dcd9d250ba6139afba6f946c9',1,'dns.Message.deserialize()'],['../classdns_1_1_m_x.html#a79379ab275c96fdbea916ce27a8c0f48',1,'dns.MX.deserialize()'],['../classdns_1_1_name.html#a7896a54a87e16fdc15368f194d2f6bc2',1,'dns.Name.deserialize()'],['../classdns_1_1_pointer.html#a96f2c3224395829326771ac84a92e680',1,'dns.Pointer.deserialize()'],['../interfacedns_1_1_protocol_object.html#af765cbed0f65314b696b5d09a4694aef',1,'dns.ProtocolObject.deserialize()'],['../classdns_1_1_question.html#a0b43981e298914aa24dc67e96fc7676f',1,'dns.Question.deserialize()'],['../classdns_1_1_resource_record.html#ad4f696f8813ef881984217d80174304d',1,'dns.ResourceRecord.deserialize()'],['../classdns_1_1_text.html#a66c15db2b35e903b2d78ea9550446a84',1,'dns.Text.deserialize()']]]
-];

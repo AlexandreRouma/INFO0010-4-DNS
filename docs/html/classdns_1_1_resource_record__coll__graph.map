@@ -1,7 +1,0 @@
-<map id="dns.ResourceRecord" name="dns.ResourceRecord">
-<area shape="rect" id="node1" title=" " alt="" coords="113,171,268,197"/>
-<area shape="rect" id="node2" href="$interfacedns_1_1_protocol_object.html" title=" " alt="" coords="5,5,149,32"/>
-<area shape="rect" id="node3" href="$classdns_1_1_name.html" title=" " alt="" coords="147,81,235,108"/>
-<area shape="rect" id="node4" href="$enumdns_1_1_record_type.html" title=" " alt="" coords="259,81,383,108"/>
-<area shape="rect" id="node5" href="$enumdns_1_1_address_class.html" title=" " alt="" coords="408,81,544,108"/>
-</map>
