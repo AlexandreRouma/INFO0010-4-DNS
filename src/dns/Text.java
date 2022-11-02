@@ -3,6 +3,7 @@ package dns;
 import dns.exceptions.*;
 
 import java.nio.ByteBuffer;
+import java.nio.ByteOrder;
 
 /**
  * DNS Text Segment.
@@ -28,6 +29,7 @@ public class Text implements ProtocolObject {
 
     public ByteBuffer serialize() {
         ByteBuffer data = ByteBuffer.allocate(getSize());
+        data.order(ByteOrder.BIG_ENDIAN);
         data.put((byte)txt.length());
         data.put(txt.getBytes());
         return data;

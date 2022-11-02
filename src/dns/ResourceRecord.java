@@ -1,14 +1,15 @@
 package dns;
 
 import java.nio.ByteBuffer;
+import java.nio.ByteOrder;
 
 /**
  * DNS Resource Record.
  */
 public class ResourceRecord implements ProtocolObject {
     public Name name;
-    public Type type;
-    public Class rclass;
+    public RecordType type;
+    public AddressClass rclass;
     public int ttl;
     public ProtocolObject record;
 
@@ -20,7 +21,7 @@ public class ResourceRecord implements ProtocolObject {
      * @param ttl Time to live.
      * @param record Record object.
      */
-    public ResourceRecord(Name name, Type type, Class rclass, int ttl, ProtocolObject record) {
+    public ResourceRecord(Name name, RecordType type, AddressClass rclass, int ttl, ProtocolObject record) {
         this.name = name;
         this.type = type;
         this.rclass = rclass;
@@ -39,6 +40,7 @@ public class ResourceRecord implements ProtocolObject {
 
     public ByteBuffer serialize() throws Exception {
         ByteBuffer buf = ByteBuffer.allocate(getSize());
+        buf.order(ByteOrder.BIG_ENDIAN);
         buf.put(name.serialize());
         buf.putShort((short)type.id);
         buf.putShort((short)rclass.id);
@@ -51,8 +53,8 @@ public class ResourceRecord implements ProtocolObject {
     public void deserialize(ByteBuffer msgBuf) throws Exception {
         // Parse record header
         name = new Name(msgBuf);
-        type = Type.fromId(msgBuf.getShort());
-        rclass = Class.fromId(msgBuf.getShort());
+        type = RecordType.fromId(msgBuf.getShort());
+        rclass = AddressClass.fromId(msgBuf.getShort());
         ttl = msgBuf.getInt();
         int rdLength = msgBuf.getShort();
         

@@ -58,10 +58,10 @@ public class Message implements ProtocolObject {
         ByteBuffer data = ByteBuffer.allocate(getSize());
         data.order(ByteOrder.BIG_ENDIAN);
         
-        // Encode message ID
+        // Serialize message ID
         data.putShort(id);
 
-        // Encode flags
+        // Serialize flags
         short flags = 0;
         flags |= (isResp ? 1 : 0) << 15;
         flags |= (opcode.id & 0xF) << 11;
@@ -72,12 +72,13 @@ public class Message implements ProtocolObject {
         flags |= rcode.id & 0xF;
         data.putShort(flags);
 
+        // Serialize record counts
         data.putShort((short)questions.size());
-        data.putShort((short)0);
+        data.putShort((short)answers.size());
         data.putShort((short)0);
         data.putShort((short)0);
 
-        // Encode questions
+        // Serialize questions
         for (Question q : questions) {
             data.put(q.serialize().array());
         }
@@ -90,11 +91,18 @@ public class Message implements ProtocolObject {
             throw new InvalidMessageException("Invalid data length.");
         }
         id = data.getShort();
+
+        // Deserialize flags
         short flags = data.getShort();
         isResp = ((flags >> 15) & 1) == 1;
         opcode = Opcode.fromId((flags >> 11) & 0xF);
+        isAuth = ((flags >> 10) & 1) == 1;
+        isTruncated = ((flags >> 9) & 1) == 1;
+        recurseDesired = ((flags >> 8) & 1) == 1;
+        recurseAvailable = ((flags >> 7) & 1) == 1;
         rcode = ResponseCode.fromId(flags & 0xF);
 
+        // Deserialize record counts
         int qCount = data.getShort();
         int aCount = data.getShort();
         

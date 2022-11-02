@@ -1,0 +1,159 @@
+\hypertarget{classdns_1_1_m_x}{}\doxysection{dns.\+MX Class Reference}
+\label{classdns_1_1_m_x}\index{dns.MX@{dns.MX}}
+
+
+Inheritance diagram for dns.\+MX\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=188pt]{classdns_1_1_m_x__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for dns.\+MX\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{classdns_1_1_m_x__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdns_1_1_m_x_a75513af638aa0201717aa28afefc2f42}{MX}} (short priority, \mbox{\hyperlink{classdns_1_1_name}{Name}} name)
+\item 
+\mbox{\hyperlink{classdns_1_1_m_x_a7b8c9083529cf7452c0791c60fae1176}{MX}} (Byte\+Buffer msg\+Buf)  throws Exception 
+\item 
+Byte\+Buffer \mbox{\hyperlink{classdns_1_1_m_x_adfecc55873b407e5a224d049fd0225ac}{serialize}} ()
+\item 
+void \mbox{\hyperlink{classdns_1_1_m_x_a79379ab275c96fdbea916ce27a8c0f48}{deserialize}} (Byte\+Buffer msg\+Buf)  throws Exception 
+\item 
+int \mbox{\hyperlink{classdns_1_1_m_x_a4ed61cdecbc91917083aec0fa7fe1fe5}{get\+Size}} ()
+\item 
+\mbox{\Hypertarget{classdns_1_1_m_x_ad58e5c0294b48dbeb6ca809dd18c5b6c}\label{classdns_1_1_m_x_ad58e5c0294b48dbeb6ca809dd18c5b6c}} 
+String {\bfseries to\+String} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdns_1_1_m_x_a15649e7570061ea9db0df78adf30941e}\label{classdns_1_1_m_x_a15649e7570061ea9db0df78adf30941e}} 
+short {\bfseries priority}
+\item 
+\mbox{\Hypertarget{classdns_1_1_m_x_abfb9ed08b9065467e2c6aa6e8cc6250c}\label{classdns_1_1_m_x_abfb9ed08b9065467e2c6aa6e8cc6250c}} 
+\mbox{\hyperlink{classdns_1_1_name}{Name}} {\bfseries name}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+D\+NS \mbox{\hyperlink{classdns_1_1_m_x}{MX}} Record. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdns_1_1_m_x_a75513af638aa0201717aa28afefc2f42}\label{classdns_1_1_m_x_a75513af638aa0201717aa28afefc2f42}} 
+\index{dns.MX@{dns.MX}!MX@{MX}}
+\index{MX@{MX}!dns.MX@{dns.MX}}
+\doxysubsubsection{\texorpdfstring{MX()}{MX()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily dns.\+M\+X.\+MX (\begin{DoxyParamCaption}\item[{short}]{priority,  }\item[{\mbox{\hyperlink{classdns_1_1_name}{Name}}}]{name }\end{DoxyParamCaption})}
+
+Create \mbox{\hyperlink{classdns_1_1_m_x}{MX}} record. 
+\begin{DoxyParams}{Parameters}
+{\em priority} & Record priority. \\
+\hline
+{\em name} & Domain name. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classdns_1_1_m_x_a7b8c9083529cf7452c0791c60fae1176}\label{classdns_1_1_m_x_a7b8c9083529cf7452c0791c60fae1176}} 
+\index{dns.MX@{dns.MX}!MX@{MX}}
+\index{MX@{MX}!dns.MX@{dns.MX}}
+\doxysubsubsection{\texorpdfstring{MX()}{MX()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily dns.\+M\+X.\+MX (\begin{DoxyParamCaption}\item[{Byte\+Buffer}]{msg\+Buf }\end{DoxyParamCaption}) throws Exception}
+
+Create \mbox{\hyperlink{classdns_1_1_m_x}{MX}} record from serialized bytes. 
+\begin{DoxyParams}{Parameters}
+{\em msg\+Buf} & Serialized bytes. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=296pt]{classdns_1_1_m_x_a7b8c9083529cf7452c0791c60fae1176_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdns_1_1_m_x_a79379ab275c96fdbea916ce27a8c0f48}\label{classdns_1_1_m_x_a79379ab275c96fdbea916ce27a8c0f48}} 
+\index{dns.MX@{dns.MX}!deserialize@{deserialize}}
+\index{deserialize@{deserialize}!dns.MX@{dns.MX}}
+\doxysubsubsection{\texorpdfstring{deserialize()}{deserialize()}}
+{\footnotesize\ttfamily void dns.\+M\+X.\+deserialize (\begin{DoxyParamCaption}\item[{Byte\+Buffer}]{buf }\end{DoxyParamCaption}) throws Exception}
+
+Deserialize object from bytes. 
+\begin{DoxyParams}{Parameters}
+{\em buf} & Serialized bytes. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interfacedns_1_1_protocol_object_af765cbed0f65314b696b5d09a4694aef}{dns.\+Protocol\+Object}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=296pt]{classdns_1_1_m_x_a79379ab275c96fdbea916ce27a8c0f48_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classdns_1_1_m_x_a4ed61cdecbc91917083aec0fa7fe1fe5}\label{classdns_1_1_m_x_a4ed61cdecbc91917083aec0fa7fe1fe5}} 
+\index{dns.MX@{dns.MX}!getSize@{getSize}}
+\index{getSize@{getSize}!dns.MX@{dns.MX}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily int dns.\+M\+X.\+get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get object size in bytes once serialized. \begin{DoxyReturn}{Returns}
+Object size in bytes. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfacedns_1_1_protocol_object_a2cb1b776546112bb4dec4faf1aca3eae}{dns.\+Protocol\+Object}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=313pt]{classdns_1_1_m_x_a4ed61cdecbc91917083aec0fa7fe1fe5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=305pt]{classdns_1_1_m_x_a4ed61cdecbc91917083aec0fa7fe1fe5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classdns_1_1_m_x_adfecc55873b407e5a224d049fd0225ac}\label{classdns_1_1_m_x_adfecc55873b407e5a224d049fd0225ac}} 
+\index{dns.MX@{dns.MX}!serialize@{serialize}}
+\index{serialize@{serialize}!dns.MX@{dns.MX}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily Byte\+Buffer dns.\+M\+X.\+serialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Serialize object to bytes. \begin{DoxyReturn}{Returns}
+Serialized bytes. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfacedns_1_1_protocol_object_a54412a59abc51937310fb6098fb4fd13}{dns.\+Protocol\+Object}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdns_1_1_m_x_adfecc55873b407e5a224d049fd0225ac_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/dns/M\+X.\+java\end{DoxyCompactItemize}

@@ -1,6 +1,7 @@
 package dns;
 
 import java.nio.ByteBuffer;
+import java.nio.ByteOrder;
 
 /**
  * DNS IP Address
@@ -26,6 +27,7 @@ public class IPAddress implements ProtocolObject {
     
     public ByteBuffer serialize() {
         ByteBuffer buf = ByteBuffer.allocate(SIZE);
+        buf.order(ByteOrder.BIG_ENDIAN);
         buf.putInt(ip);
         return buf;
     }

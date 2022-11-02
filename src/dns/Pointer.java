@@ -3,6 +3,7 @@ package dns;
 import dns.exceptions.*;
 
 import java.nio.ByteBuffer;
+import java.nio.ByteOrder;
 
 /**
  * DNS Name Pointer.
@@ -34,6 +35,7 @@ public class Pointer implements ProtocolObject {
 
     public ByteBuffer serialize() {
         ByteBuffer buf = ByteBuffer.allocate(SIZE);
+        buf.order(ByteOrder.BIG_ENDIAN);
         buf.putShort((short)(index | SIGNATURE));
         return buf;
     }

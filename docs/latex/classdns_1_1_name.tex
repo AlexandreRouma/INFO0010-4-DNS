@@ -1,0 +1,169 @@
+\hypertarget{classdns_1_1_name}{}\doxysection{dns.\+Name Class Reference}
+\label{classdns_1_1_name}\index{dns.Name@{dns.Name}}
+
+
+Inheritance diagram for dns.\+Name\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=188pt]{classdns_1_1_name__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for dns.\+Name\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=188pt]{classdns_1_1_name__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdns_1_1_name_a5053cbdc2dd10dbdbc03e2965f871d24}{Name}} (String name)
+\item 
+\mbox{\hyperlink{classdns_1_1_name_a5b284cd0625be84f56f923d20cda9f21}{Name}} (Byte\+Buffer msg\+Buf)  throws Exception 
+\item 
+Byte\+Buffer \mbox{\hyperlink{classdns_1_1_name_a987c6c3e5ed0847b77a00bba2554db04}{serialize}} ()
+\item 
+void \mbox{\hyperlink{classdns_1_1_name_a7896a54a87e16fdc15368f194d2f6bc2}{deserialize}} (Byte\+Buffer msg\+Buf)  throws Exception 
+\item 
+int \mbox{\hyperlink{classdns_1_1_name_a6de36e4c87968a8cc5e07eb626790ce3}{get\+Size}} ()
+\item 
+void \mbox{\hyperlink{classdns_1_1_name_a434495b1369e37be230e10eeaa0e5fbe}{set}} (String name)
+\item 
+String \mbox{\hyperlink{classdns_1_1_name_aaf0e775f5e31b90304d7236767c0a72b}{to\+String}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+D\+NS Domain \mbox{\hyperlink{classdns_1_1_name}{Name}}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdns_1_1_name_a5053cbdc2dd10dbdbc03e2965f871d24}\label{classdns_1_1_name_a5053cbdc2dd10dbdbc03e2965f871d24}} 
+\index{dns.Name@{dns.Name}!Name@{Name}}
+\index{Name@{Name}!dns.Name@{dns.Name}}
+\doxysubsubsection{\texorpdfstring{Name()}{Name()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily dns.\+Name.\+Name (\begin{DoxyParamCaption}\item[{String}]{name }\end{DoxyParamCaption})}
+
+Create name from string. 
+\begin{DoxyParams}{Parameters}
+{\em name} & Dot delimited domain name. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classdns_1_1_name_a5b284cd0625be84f56f923d20cda9f21}\label{classdns_1_1_name_a5b284cd0625be84f56f923d20cda9f21}} 
+\index{dns.Name@{dns.Name}!Name@{Name}}
+\index{Name@{Name}!dns.Name@{dns.Name}}
+\doxysubsubsection{\texorpdfstring{Name()}{Name()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily dns.\+Name.\+Name (\begin{DoxyParamCaption}\item[{Byte\+Buffer}]{msg\+Buf }\end{DoxyParamCaption}) throws Exception}
+
+Create name from encoded bytes 
+\begin{DoxyParams}{Parameters}
+{\em msg\+Buf} & Buffer containing the entire message with its position at the name. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{classdns_1_1_name_a5b284cd0625be84f56f923d20cda9f21_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdns_1_1_name_a7896a54a87e16fdc15368f194d2f6bc2}\label{classdns_1_1_name_a7896a54a87e16fdc15368f194d2f6bc2}} 
+\index{dns.Name@{dns.Name}!deserialize@{deserialize}}
+\index{deserialize@{deserialize}!dns.Name@{dns.Name}}
+\doxysubsubsection{\texorpdfstring{deserialize()}{deserialize()}}
+{\footnotesize\ttfamily void dns.\+Name.\+deserialize (\begin{DoxyParamCaption}\item[{Byte\+Buffer}]{msg\+Buf }\end{DoxyParamCaption}) throws Exception}
+
+Decode from bytes 
+\begin{DoxyParams}{Parameters}
+{\em msg\+Buf} & Buffer containing the entire message with its position at the name. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interfacedns_1_1_protocol_object_af765cbed0f65314b696b5d09a4694aef}{dns.\+Protocol\+Object}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{classdns_1_1_name_a7896a54a87e16fdc15368f194d2f6bc2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classdns_1_1_name_a6de36e4c87968a8cc5e07eb626790ce3}\label{classdns_1_1_name_a6de36e4c87968a8cc5e07eb626790ce3}} 
+\index{dns.Name@{dns.Name}!getSize@{getSize}}
+\index{getSize@{getSize}!dns.Name@{dns.Name}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily int dns.\+Name.\+get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get size of the encoded buffer. \begin{DoxyReturn}{Returns}
+Size in bytes. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfacedns_1_1_protocol_object_a2cb1b776546112bb4dec4faf1aca3eae}{dns.\+Protocol\+Object}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdns_1_1_name_a6de36e4c87968a8cc5e07eb626790ce3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classdns_1_1_name_a987c6c3e5ed0847b77a00bba2554db04}\label{classdns_1_1_name_a987c6c3e5ed0847b77a00bba2554db04}} 
+\index{dns.Name@{dns.Name}!serialize@{serialize}}
+\index{serialize@{serialize}!dns.Name@{dns.Name}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily Byte\+Buffer dns.\+Name.\+serialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Encode name to bytes \begin{DoxyReturn}{Returns}
+Buffer containing the encoded name 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfacedns_1_1_protocol_object_a54412a59abc51937310fb6098fb4fd13}{dns.\+Protocol\+Object}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=331pt]{classdns_1_1_name_a987c6c3e5ed0847b77a00bba2554db04_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdns_1_1_name_a987c6c3e5ed0847b77a00bba2554db04_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classdns_1_1_name_a434495b1369e37be230e10eeaa0e5fbe}\label{classdns_1_1_name_a434495b1369e37be230e10eeaa0e5fbe}} 
+\index{dns.Name@{dns.Name}!set@{set}}
+\index{set@{set}!dns.Name@{dns.Name}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily void dns.\+Name.\+set (\begin{DoxyParamCaption}\item[{String}]{name }\end{DoxyParamCaption})}
+
+Set domain name. 
+\begin{DoxyParams}{Parameters}
+{\em name} & Dot-\/delimited domain name. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classdns_1_1_name_aaf0e775f5e31b90304d7236767c0a72b}\label{classdns_1_1_name_aaf0e775f5e31b90304d7236767c0a72b}} 
+\index{dns.Name@{dns.Name}!toString@{toString}}
+\index{toString@{toString}!dns.Name@{dns.Name}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily String dns.\+Name.\+to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get domain name \begin{DoxyReturn}{Returns}
+Dot-\/delimited domain name. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/dns/Name.\+java\end{DoxyCompactItemize}

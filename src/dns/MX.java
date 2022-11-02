@@ -1,6 +1,7 @@
 package dns;
 
 import java.nio.ByteBuffer;
+import java.nio.ByteOrder;
 
 /**
  * DNS MX Record.
@@ -29,6 +30,7 @@ public class MX implements ProtocolObject {
 
     public ByteBuffer serialize() {
         ByteBuffer buf = ByteBuffer.allocate(getSize());
+        buf.order(ByteOrder.BIG_ENDIAN);
         buf.putShort(priority);
         buf.put(name.serialize());
         return buf;

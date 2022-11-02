@@ -1,5 +1,4 @@
 import dns.*;
-import dns.Class;
 
 import java.nio.ByteBuffer;
 import java.util.Vector;
@@ -16,28 +15,38 @@ public class Client {
             // Parse arguments
             String host = args[0];
             String domain = args[1];
-            Type qtype = Type.A;
+            RecordType qtype = RecordType.A;
             if (args.length == 3) {
                 String qstr = args[2];
-                if (!Type.nameIsValid(qstr)) {
+                if (!RecordType.nameIsValid(qstr)) {
                     System.err.println("Unknown question type.");
                     return;
                 }
-                qtype = Type.fromString(qstr);
+                qtype = RecordType.fromString(qstr);
             }
 
-            // Print the question
-            System.out.printf("Question (NS=%s, NAME=%s, TYPE=%s)\n", host, domain, qtype);
-            
-            // Perform DNS query
+            // Create question
             Vector<Question> questions = new Vector<Question>();
-            questions.add(new Question(new Name(domain), qtype, Class.IN));
-            Vector<ResourceRecord> answers = DNS.query(host, 53, questions);
+            questions.add(new Question(new Name(domain), qtype, AddressClass.IN));
+
+            // Print the question
+            System.out.printf("Question (NS=%s, %s)\n", host, questions.get(0));
+
+            // Create client
+            dns.Client client = new dns.Client(host, 53);
+
+            // Perform DNS query
+            Vector<ResourceRecord> answers = client.query(questions);
+
+            // Close the client
+            client.close();
 
             // Print results
             for (ResourceRecord rr : answers) {
                 System.out.printf("Answer %s\n", rr.toString());
             }
+
+            // Close the client
         }
         catch (Exception e) {
             e.printStackTrace();

@@ -1,0 +1,189 @@
+\hypertarget{classdns_1_1_resource_record}{}\doxysection{dns.\+Resource\+Record Class Reference}
+\label{classdns_1_1_resource_record}\index{dns.ResourceRecord@{dns.ResourceRecord}}
+
+
+Inheritance diagram for dns.\+Resource\+Record\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{classdns_1_1_resource_record__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for dns.\+Resource\+Record\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdns_1_1_resource_record__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdns_1_1_resource_record_ae0c6c81706780bba2235356fd0d42d4c}{Resource\+Record}} (\mbox{\hyperlink{classdns_1_1_name}{Name}} name, \mbox{\hyperlink{enumdns_1_1_record_type}{Record\+Type}} type, \mbox{\hyperlink{enumdns_1_1_address_class}{Address\+Class}} rclass, int ttl, \mbox{\hyperlink{interfacedns_1_1_protocol_object}{Protocol\+Object}} record)
+\item 
+\mbox{\hyperlink{classdns_1_1_resource_record_a7d3c2c7a82dd26c7b442bc31999e0028}{Resource\+Record}} (Byte\+Buffer msg\+Buf)  throws Exception 
+\item 
+Byte\+Buffer \mbox{\hyperlink{classdns_1_1_resource_record_a92c3e83fadd5da89441ff4d026c36640}{serialize}} ()  throws Exception 
+\item 
+void \mbox{\hyperlink{classdns_1_1_resource_record_ad4f696f8813ef881984217d80174304d}{deserialize}} (Byte\+Buffer msg\+Buf)  throws Exception 
+\item 
+int \mbox{\hyperlink{classdns_1_1_resource_record_a878c8d42d04bfe27645dbfd73738bb07}{get\+Size}} ()
+\item 
+\mbox{\Hypertarget{classdns_1_1_resource_record_afe5215381853d01ad8a326baa2e21f59}\label{classdns_1_1_resource_record_afe5215381853d01ad8a326baa2e21f59}} 
+String {\bfseries to\+String} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdns_1_1_resource_record_aebf2a9cfafe1ae59c3658b4c4c91cc32}\label{classdns_1_1_resource_record_aebf2a9cfafe1ae59c3658b4c4c91cc32}} 
+\mbox{\hyperlink{classdns_1_1_name}{Name}} {\bfseries name}
+\item 
+\mbox{\Hypertarget{classdns_1_1_resource_record_af347bead41a77737516e0a5e01fd1fde}\label{classdns_1_1_resource_record_af347bead41a77737516e0a5e01fd1fde}} 
+\mbox{\hyperlink{enumdns_1_1_record_type}{Record\+Type}} {\bfseries type}
+\item 
+\mbox{\Hypertarget{classdns_1_1_resource_record_a7466755ea3e44785099a4a9610cd043e}\label{classdns_1_1_resource_record_a7466755ea3e44785099a4a9610cd043e}} 
+\mbox{\hyperlink{enumdns_1_1_address_class}{Address\+Class}} {\bfseries rclass}
+\item 
+\mbox{\Hypertarget{classdns_1_1_resource_record_a53f6e703f4432fefa1fc08478140ba65}\label{classdns_1_1_resource_record_a53f6e703f4432fefa1fc08478140ba65}} 
+int {\bfseries ttl}
+\item 
+\mbox{\Hypertarget{classdns_1_1_resource_record_a75f0c689697848129362cb3b6cb5dcd6}\label{classdns_1_1_resource_record_a75f0c689697848129362cb3b6cb5dcd6}} 
+\mbox{\hyperlink{interfacedns_1_1_protocol_object}{Protocol\+Object}} {\bfseries record}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+D\+NS Resource Record. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdns_1_1_resource_record_ae0c6c81706780bba2235356fd0d42d4c}\label{classdns_1_1_resource_record_ae0c6c81706780bba2235356fd0d42d4c}} 
+\index{dns.ResourceRecord@{dns.ResourceRecord}!ResourceRecord@{ResourceRecord}}
+\index{ResourceRecord@{ResourceRecord}!dns.ResourceRecord@{dns.ResourceRecord}}
+\doxysubsubsection{\texorpdfstring{ResourceRecord()}{ResourceRecord()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily dns.\+Resource\+Record.\+Resource\+Record (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdns_1_1_name}{Name}}}]{name,  }\item[{\mbox{\hyperlink{enumdns_1_1_record_type}{Record\+Type}}}]{type,  }\item[{\mbox{\hyperlink{enumdns_1_1_address_class}{Address\+Class}}}]{rclass,  }\item[{int}]{ttl,  }\item[{\mbox{\hyperlink{interfacedns_1_1_protocol_object}{Protocol\+Object}}}]{record }\end{DoxyParamCaption})}
+
+Create Resourece Record. 
+\begin{DoxyParams}{Parameters}
+{\em name} & Domain \mbox{\hyperlink{classdns_1_1_name}{Name}} \\
+\hline
+{\em type} & Record type. \\
+\hline
+{\em rclass} & Address class. \\
+\hline
+{\em ttl} & Time to live. \\
+\hline
+{\em record} & Record object. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classdns_1_1_resource_record_a7d3c2c7a82dd26c7b442bc31999e0028}\label{classdns_1_1_resource_record_a7d3c2c7a82dd26c7b442bc31999e0028}} 
+\index{dns.ResourceRecord@{dns.ResourceRecord}!ResourceRecord@{ResourceRecord}}
+\index{ResourceRecord@{ResourceRecord}!dns.ResourceRecord@{dns.ResourceRecord}}
+\doxysubsubsection{\texorpdfstring{ResourceRecord()}{ResourceRecord()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily dns.\+Resource\+Record.\+Resource\+Record (\begin{DoxyParamCaption}\item[{Byte\+Buffer}]{msg\+Buf }\end{DoxyParamCaption}) throws Exception}
+
+Create Resource Record from serialized bytes. 
+\begin{DoxyParams}{Parameters}
+{\em msg\+Buf} & Serialized bytes. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & \\
+\hline
+\end{DoxyExceptions}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdns_1_1_resource_record_a7d3c2c7a82dd26c7b442bc31999e0028_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdns_1_1_resource_record_ad4f696f8813ef881984217d80174304d}\label{classdns_1_1_resource_record_ad4f696f8813ef881984217d80174304d}} 
+\index{dns.ResourceRecord@{dns.ResourceRecord}!deserialize@{deserialize}}
+\index{deserialize@{deserialize}!dns.ResourceRecord@{dns.ResourceRecord}}
+\doxysubsubsection{\texorpdfstring{deserialize()}{deserialize()}}
+{\footnotesize\ttfamily void dns.\+Resource\+Record.\+deserialize (\begin{DoxyParamCaption}\item[{Byte\+Buffer}]{buf }\end{DoxyParamCaption}) throws Exception}
+
+Deserialize object from bytes. 
+\begin{DoxyParams}{Parameters}
+{\em buf} & Serialized bytes. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interfacedns_1_1_protocol_object_af765cbed0f65314b696b5d09a4694aef}{dns.\+Protocol\+Object}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdns_1_1_resource_record_ad4f696f8813ef881984217d80174304d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdns_1_1_resource_record_ad4f696f8813ef881984217d80174304d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classdns_1_1_resource_record_a878c8d42d04bfe27645dbfd73738bb07}\label{classdns_1_1_resource_record_a878c8d42d04bfe27645dbfd73738bb07}} 
+\index{dns.ResourceRecord@{dns.ResourceRecord}!getSize@{getSize}}
+\index{getSize@{getSize}!dns.ResourceRecord@{dns.ResourceRecord}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily int dns.\+Resource\+Record.\+get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get object size in bytes once serialized. \begin{DoxyReturn}{Returns}
+Object size in bytes. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfacedns_1_1_protocol_object_a2cb1b776546112bb4dec4faf1aca3eae}{dns.\+Protocol\+Object}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdns_1_1_resource_record_a878c8d42d04bfe27645dbfd73738bb07_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdns_1_1_resource_record_a878c8d42d04bfe27645dbfd73738bb07_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classdns_1_1_resource_record_a92c3e83fadd5da89441ff4d026c36640}\label{classdns_1_1_resource_record_a92c3e83fadd5da89441ff4d026c36640}} 
+\index{dns.ResourceRecord@{dns.ResourceRecord}!serialize@{serialize}}
+\index{serialize@{serialize}!dns.ResourceRecord@{dns.ResourceRecord}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily Byte\+Buffer dns.\+Resource\+Record.\+serialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) throws Exception}
+
+Serialize object to bytes. \begin{DoxyReturn}{Returns}
+Serialized bytes. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfacedns_1_1_protocol_object_a54412a59abc51937310fb6098fb4fd13}{dns.\+Protocol\+Object}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdns_1_1_resource_record_a92c3e83fadd5da89441ff4d026c36640_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/dns/Resource\+Record.\+java\end{DoxyCompactItemize}

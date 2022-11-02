@@ -1,14 +1,15 @@
 package dns;
 
 import java.nio.ByteBuffer;
+import java.nio.ByteOrder;
 
 /**
  * DNS Question.
  */
 public class Question implements ProtocolObject {
     public Name name = null;
-    public Type type = Type.A;
-    public Class qclass = Class.IN;
+    public RecordType type = RecordType.A;
+    public AddressClass qclass = AddressClass.IN;
 
     /**
      * Create Question.
@@ -16,7 +17,7 @@ public class Question implements ProtocolObject {
      * @param type Question type.
      * @param qclass Address class.
      */
-    public Question(Name name, Type type, Class qclass) {
+    public Question(Name name, RecordType type, AddressClass qclass) {
         this.name = name;
         this.type = type;
         this.qclass = qclass;
@@ -33,6 +34,7 @@ public class Question implements ProtocolObject {
 
     public ByteBuffer serialize() {
         ByteBuffer buf = ByteBuffer.allocate(getSize());
+        buf.order(ByteOrder.BIG_ENDIAN);
         buf.put(name.serialize().array());
         buf.putShort((short)type.id);
         buf.putShort((short)qclass.id);
@@ -41,12 +43,16 @@ public class Question implements ProtocolObject {
 
     public void deserialize(ByteBuffer msgBuf) throws Exception {
         name = new Name(msgBuf);
-        type = Type.fromId(msgBuf.getShort());
-        qclass = Class.fromId(msgBuf.getShort());
+        type = RecordType.fromId(msgBuf.getShort());
+        qclass = AddressClass.fromId(msgBuf.getShort());
     }
     
     public int getSize() {
         return BASE_SIZE + name.getSize();
+    }
+
+    public String toString() {
+        return String.format("NAME=%s, TYPE=%s", name, type);
     }
 
     private static final int BASE_SIZE = 4;

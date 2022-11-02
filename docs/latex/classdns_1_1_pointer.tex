@@ -1,0 +1,156 @@
+\hypertarget{classdns_1_1_pointer}{}\doxysection{dns.\+Pointer Class Reference}
+\label{classdns_1_1_pointer}\index{dns.Pointer@{dns.Pointer}}
+
+
+Inheritance diagram for dns.\+Pointer\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=188pt]{classdns_1_1_pointer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for dns.\+Pointer\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=188pt]{classdns_1_1_pointer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdns_1_1_pointer_a002a0b92d7b10db6f835ed8a4397f8a4}{Pointer}} (short index)
+\item 
+\mbox{\hyperlink{classdns_1_1_pointer_ac6cda3d89cd60bccf81deeaefb796199}{Pointer}} (Byte\+Buffer msg\+Buf)  throws Exception 
+\item 
+Byte\+Buffer \mbox{\hyperlink{classdns_1_1_pointer_aea1ebfcde4d98f17da1028c413a08aed}{serialize}} ()
+\item 
+void \mbox{\hyperlink{classdns_1_1_pointer_a96f2c3224395829326771ac84a92e680}{deserialize}} (Byte\+Buffer msg\+Buf)  throws Exception 
+\item 
+int \mbox{\hyperlink{classdns_1_1_pointer_a9dfe84545b0c5e06d38cac0d7ca43525}{get\+Size}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdns_1_1_pointer_a23a8ad1d3177455e92b646ca277e22c7}\label{classdns_1_1_pointer_a23a8ad1d3177455e92b646ca277e22c7}} 
+static boolean {\bfseries is\+Pointer} (Byte\+Buffer buf)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdns_1_1_pointer_a395c0b8a7d951ddcc997d14c154fa79f}\label{classdns_1_1_pointer_a395c0b8a7d951ddcc997d14c154fa79f}} 
+short {\bfseries index}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdns_1_1_pointer_a50f30cab047d861dc2360976af2c8bb0}\label{classdns_1_1_pointer_a50f30cab047d861dc2360976af2c8bb0}} 
+static final short {\bfseries S\+I\+G\+N\+A\+T\+U\+RE} = (short)0x\+C000
+\item 
+\mbox{\Hypertarget{classdns_1_1_pointer_ac599c25f74227d0ddbe164bc963b870c}\label{classdns_1_1_pointer_ac599c25f74227d0ddbe164bc963b870c}} 
+static final byte {\bfseries B\+Y\+T\+E\+\_\+\+S\+I\+G\+N\+A\+T\+U\+RE} = (byte)0x\+C0
+\item 
+\mbox{\Hypertarget{classdns_1_1_pointer_a3a271e3c1c8b5ee2c6221b240a2b9333}\label{classdns_1_1_pointer_a3a271e3c1c8b5ee2c6221b240a2b9333}} 
+static final short {\bfseries M\+A\+SK} = (short)0x\+C000
+\item 
+\mbox{\Hypertarget{classdns_1_1_pointer_a060cb6027f82600d50e92124c5290e4f}\label{classdns_1_1_pointer_a060cb6027f82600d50e92124c5290e4f}} 
+static final byte {\bfseries B\+Y\+T\+E\+\_\+\+M\+A\+SK} = (byte)0x\+C0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+D\+NS \mbox{\hyperlink{classdns_1_1_name}{Name}} \mbox{\hyperlink{classdns_1_1_pointer}{Pointer}}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdns_1_1_pointer_a002a0b92d7b10db6f835ed8a4397f8a4}\label{classdns_1_1_pointer_a002a0b92d7b10db6f835ed8a4397f8a4}} 
+\index{dns.Pointer@{dns.Pointer}!Pointer@{Pointer}}
+\index{Pointer@{Pointer}!dns.Pointer@{dns.Pointer}}
+\doxysubsubsection{\texorpdfstring{Pointer()}{Pointer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily dns.\+Pointer.\+Pointer (\begin{DoxyParamCaption}\item[{short}]{index }\end{DoxyParamCaption})}
+
+Create pointer. 
+\begin{DoxyParams}{Parameters}
+{\em index} & Byte index of the name being pointed to. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classdns_1_1_pointer_ac6cda3d89cd60bccf81deeaefb796199}\label{classdns_1_1_pointer_ac6cda3d89cd60bccf81deeaefb796199}} 
+\index{dns.Pointer@{dns.Pointer}!Pointer@{Pointer}}
+\index{Pointer@{Pointer}!dns.Pointer@{dns.Pointer}}
+\doxysubsubsection{\texorpdfstring{Pointer()}{Pointer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily dns.\+Pointer.\+Pointer (\begin{DoxyParamCaption}\item[{Byte\+Buffer}]{msg\+Buf }\end{DoxyParamCaption}) throws Exception}
+
+Create pointer from serialized bytes. 
+\begin{DoxyParams}{Parameters}
+{\em msg\+Buf} & Serialized bytes. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & \\
+\hline
+\end{DoxyExceptions}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdns_1_1_pointer_ac6cda3d89cd60bccf81deeaefb796199_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdns_1_1_pointer_a96f2c3224395829326771ac84a92e680}\label{classdns_1_1_pointer_a96f2c3224395829326771ac84a92e680}} 
+\index{dns.Pointer@{dns.Pointer}!deserialize@{deserialize}}
+\index{deserialize@{deserialize}!dns.Pointer@{dns.Pointer}}
+\doxysubsubsection{\texorpdfstring{deserialize()}{deserialize()}}
+{\footnotesize\ttfamily void dns.\+Pointer.\+deserialize (\begin{DoxyParamCaption}\item[{Byte\+Buffer}]{buf }\end{DoxyParamCaption}) throws Exception}
+
+Deserialize object from bytes. 
+\begin{DoxyParams}{Parameters}
+{\em buf} & Serialized bytes. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interfacedns_1_1_protocol_object_af765cbed0f65314b696b5d09a4694aef}{dns.\+Protocol\+Object}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdns_1_1_pointer_a96f2c3224395829326771ac84a92e680_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classdns_1_1_pointer_a9dfe84545b0c5e06d38cac0d7ca43525}\label{classdns_1_1_pointer_a9dfe84545b0c5e06d38cac0d7ca43525}} 
+\index{dns.Pointer@{dns.Pointer}!getSize@{getSize}}
+\index{getSize@{getSize}!dns.Pointer@{dns.Pointer}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily int dns.\+Pointer.\+get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get object size in bytes once serialized. \begin{DoxyReturn}{Returns}
+Object size in bytes. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfacedns_1_1_protocol_object_a2cb1b776546112bb4dec4faf1aca3eae}{dns.\+Protocol\+Object}}.
+
+\mbox{\Hypertarget{classdns_1_1_pointer_aea1ebfcde4d98f17da1028c413a08aed}\label{classdns_1_1_pointer_aea1ebfcde4d98f17da1028c413a08aed}} 
+\index{dns.Pointer@{dns.Pointer}!serialize@{serialize}}
+\index{serialize@{serialize}!dns.Pointer@{dns.Pointer}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily Byte\+Buffer dns.\+Pointer.\+serialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Serialize object to bytes. \begin{DoxyReturn}{Returns}
+Serialized bytes. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfacedns_1_1_protocol_object_a54412a59abc51937310fb6098fb4fd13}{dns.\+Protocol\+Object}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/dns/Pointer.\+java\end{DoxyCompactItemize}

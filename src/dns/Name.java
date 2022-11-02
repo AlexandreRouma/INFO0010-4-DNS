@@ -3,6 +3,7 @@ package dns;
 import dns.exceptions.*;
 
 import java.nio.ByteBuffer;
+import java.nio.ByteOrder;
 import java.util.Vector;
 
 /**
@@ -31,6 +32,7 @@ public class Name implements ProtocolObject {
      */
     public ByteBuffer serialize() {
         ByteBuffer data = ByteBuffer.allocate(getSize());
+        data.order(ByteOrder.BIG_ENDIAN);
 
         // Encode everything
         for (String s : labels) {

@@ -1,0 +1,7 @@
+<map id="dns.Question" name="dns.Question">
+<area shape="rect" id="node1" title=" " alt="" coords="184,171,291,197"/>
+<area shape="rect" id="node2" href="$interfacedns_1_1_protocol_object.html" title=" " alt="" coords="5,5,149,32"/>
+<area shape="rect" id="node3" href="$classdns_1_1_name.html" title=" " alt="" coords="99,81,187,108"/>
+<area shape="rect" id="node4" href="$enumdns_1_1_record_type.html" title=" " alt="" coords="211,81,335,108"/>
+<area shape="rect" id="node5" href="$enumdns_1_1_address_class.html" title=" " alt="" coords="360,81,496,108"/>
+</map>

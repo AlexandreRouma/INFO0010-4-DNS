@@ -1,0 +1,196 @@
+\hypertarget{classdns_1_1_message}{}\doxysection{dns.\+Message Class Reference}
+\label{classdns_1_1_message}\index{dns.Message@{dns.Message}}
+
+
+Inheritance diagram for dns.\+Message\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=188pt]{classdns_1_1_message__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for dns.\+Message\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdns_1_1_message__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdns_1_1_message_a7aeecea9dcb886b4d61dee1d13694516}{Message}} (\mbox{\hyperlink{enumdns_1_1_opcode}{Opcode}} opcode, short id, boolean recurse\+Desired, Vector$<$ \mbox{\hyperlink{classdns_1_1_question}{Question}} $>$ questions)
+\item 
+\mbox{\hyperlink{classdns_1_1_message_a1c098f59d1f95913a6035e1cbe474628}{Message}} (\mbox{\hyperlink{enumdns_1_1_response_code}{Response\+Code}} rcode, short id, boolean is\+Auth, boolean is\+Truncated, boolean recurse\+Available)
+\item 
+\mbox{\hyperlink{classdns_1_1_message_a71a49b9bb3993ddf82275b5ef46a559a}{Message}} (Byte\+Buffer data)  throws Exception 
+\item 
+Byte\+Buffer \mbox{\hyperlink{classdns_1_1_message_a0de88a0caa9e25aa23d303e7292445b2}{serialize}} ()
+\item 
+void \mbox{\hyperlink{classdns_1_1_message_a5e72127dcd9d250ba6139afba6f946c9}{deserialize}} (Byte\+Buffer data)  throws Exception 
+\item 
+int \mbox{\hyperlink{classdns_1_1_message_a1a6ca4c29ffb64939a5f1118ac07f377}{get\+Size}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdns_1_1_message_a2b9e1484cb4f9ae555eba22d1309ef37}\label{classdns_1_1_message_a2b9e1484cb4f9ae555eba22d1309ef37}} 
+short {\bfseries id} = 0
+\item 
+\mbox{\Hypertarget{classdns_1_1_message_ac4276c5b1dd810dbf847429d82677f6a}\label{classdns_1_1_message_ac4276c5b1dd810dbf847429d82677f6a}} 
+\mbox{\hyperlink{enumdns_1_1_opcode}{Opcode}} {\bfseries opcode} = Opcode.\+Q\+U\+E\+RY
+\item 
+\mbox{\Hypertarget{classdns_1_1_message_ad20f4ef82049ccbe39e519ffa9dced75}\label{classdns_1_1_message_ad20f4ef82049ccbe39e519ffa9dced75}} 
+boolean {\bfseries is\+Resp} = false
+\item 
+\mbox{\Hypertarget{classdns_1_1_message_abb9de96e2e2b6dabc927d6e67163089f}\label{classdns_1_1_message_abb9de96e2e2b6dabc927d6e67163089f}} 
+boolean {\bfseries is\+Auth} = false
+\item 
+\mbox{\Hypertarget{classdns_1_1_message_ade672f1f80f3a321bc884d9036edb59f}\label{classdns_1_1_message_ade672f1f80f3a321bc884d9036edb59f}} 
+boolean {\bfseries is\+Truncated} = false
+\item 
+\mbox{\Hypertarget{classdns_1_1_message_a21a310bbd42bf165ce74a5b5f8abebbc}\label{classdns_1_1_message_a21a310bbd42bf165ce74a5b5f8abebbc}} 
+boolean {\bfseries recurse\+Desired} = false
+\item 
+\mbox{\Hypertarget{classdns_1_1_message_a7af11f0d71d22ee42423e6f58c0863b9}\label{classdns_1_1_message_a7af11f0d71d22ee42423e6f58c0863b9}} 
+boolean {\bfseries recurse\+Available} = false
+\item 
+\mbox{\Hypertarget{classdns_1_1_message_ab27315bb490f5df9b4ea58d918b42b02}\label{classdns_1_1_message_ab27315bb490f5df9b4ea58d918b42b02}} 
+\mbox{\hyperlink{enumdns_1_1_response_code}{Response\+Code}} {\bfseries rcode} = Response\+Code.\+S\+U\+C\+C\+E\+SS
+\item 
+\mbox{\Hypertarget{classdns_1_1_message_adcae1629eb2e67d2a9f71c1cf82f091f}\label{classdns_1_1_message_adcae1629eb2e67d2a9f71c1cf82f091f}} 
+Vector$<$ \mbox{\hyperlink{classdns_1_1_question}{Question}} $>$ {\bfseries questions} = new Vector$<$\mbox{\hyperlink{classdns_1_1_question}{Question}}$>$()
+\item 
+\mbox{\Hypertarget{classdns_1_1_message_afd936ce4a868bb727f6ba7ae4b082fcf}\label{classdns_1_1_message_afd936ce4a868bb727f6ba7ae4b082fcf}} 
+Vector$<$ \mbox{\hyperlink{classdns_1_1_resource_record}{Resource\+Record}} $>$ {\bfseries answers} = new Vector$<$\mbox{\hyperlink{classdns_1_1_resource_record}{Resource\+Record}}$>$()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+D\+NS \mbox{\hyperlink{classdns_1_1_message}{Message}} 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdns_1_1_message_a7aeecea9dcb886b4d61dee1d13694516}\label{classdns_1_1_message_a7aeecea9dcb886b4d61dee1d13694516}} 
+\index{dns.Message@{dns.Message}!Message@{Message}}
+\index{Message@{Message}!dns.Message@{dns.Message}}
+\doxysubsubsection{\texorpdfstring{Message()}{Message()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily dns.\+Message.\+Message (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{enumdns_1_1_opcode}{Opcode}}}]{opcode,  }\item[{short}]{id,  }\item[{boolean}]{recurse\+Desired,  }\item[{Vector$<$ \mbox{\hyperlink{classdns_1_1_question}{Question}} $>$}]{questions }\end{DoxyParamCaption})}
+
+Create a \mbox{\hyperlink{classdns_1_1_client}{Client}} to Server message. 
+\begin{DoxyParams}{Parameters}
+{\em opcode} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classdns_1_1_message_a1c098f59d1f95913a6035e1cbe474628}\label{classdns_1_1_message_a1c098f59d1f95913a6035e1cbe474628}} 
+\index{dns.Message@{dns.Message}!Message@{Message}}
+\index{Message@{Message}!dns.Message@{dns.Message}}
+\doxysubsubsection{\texorpdfstring{Message()}{Message()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily dns.\+Message.\+Message (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{enumdns_1_1_response_code}{Response\+Code}}}]{rcode,  }\item[{short}]{id,  }\item[{boolean}]{is\+Auth,  }\item[{boolean}]{is\+Truncated,  }\item[{boolean}]{recurse\+Available }\end{DoxyParamCaption})}
+
+Create a Server to \mbox{\hyperlink{classdns_1_1_client}{Client}} message. 
+\begin{DoxyParams}{Parameters}
+{\em rcode} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classdns_1_1_message_a71a49b9bb3993ddf82275b5ef46a559a}\label{classdns_1_1_message_a71a49b9bb3993ddf82275b5ef46a559a}} 
+\index{dns.Message@{dns.Message}!Message@{Message}}
+\index{Message@{Message}!dns.Message@{dns.Message}}
+\doxysubsubsection{\texorpdfstring{Message()}{Message()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily dns.\+Message.\+Message (\begin{DoxyParamCaption}\item[{Byte\+Buffer}]{data }\end{DoxyParamCaption}) throws Exception}
+
+Create a message from serialized bytes. 
+\begin{DoxyParams}{Parameters}
+{\em data} & Serialized bytes. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & \\
+\hline
+\end{DoxyExceptions}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdns_1_1_message_a71a49b9bb3993ddf82275b5ef46a559a_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdns_1_1_message_a5e72127dcd9d250ba6139afba6f946c9}\label{classdns_1_1_message_a5e72127dcd9d250ba6139afba6f946c9}} 
+\index{dns.Message@{dns.Message}!deserialize@{deserialize}}
+\index{deserialize@{deserialize}!dns.Message@{dns.Message}}
+\doxysubsubsection{\texorpdfstring{deserialize()}{deserialize()}}
+{\footnotesize\ttfamily void dns.\+Message.\+deserialize (\begin{DoxyParamCaption}\item[{Byte\+Buffer}]{buf }\end{DoxyParamCaption}) throws Exception}
+
+Deserialize object from bytes. 
+\begin{DoxyParams}{Parameters}
+{\em buf} & Serialized bytes. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interfacedns_1_1_protocol_object_af765cbed0f65314b696b5d09a4694aef}{dns.\+Protocol\+Object}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdns_1_1_message_a5e72127dcd9d250ba6139afba6f946c9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdns_1_1_message_a5e72127dcd9d250ba6139afba6f946c9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classdns_1_1_message_a1a6ca4c29ffb64939a5f1118ac07f377}\label{classdns_1_1_message_a1a6ca4c29ffb64939a5f1118ac07f377}} 
+\index{dns.Message@{dns.Message}!getSize@{getSize}}
+\index{getSize@{getSize}!dns.Message@{dns.Message}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily int dns.\+Message.\+get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get object size in bytes once serialized. \begin{DoxyReturn}{Returns}
+Object size in bytes. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfacedns_1_1_protocol_object_a2cb1b776546112bb4dec4faf1aca3eae}{dns.\+Protocol\+Object}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdns_1_1_message_a1a6ca4c29ffb64939a5f1118ac07f377_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classdns_1_1_message_a0de88a0caa9e25aa23d303e7292445b2}\label{classdns_1_1_message_a0de88a0caa9e25aa23d303e7292445b2}} 
+\index{dns.Message@{dns.Message}!serialize@{serialize}}
+\index{serialize@{serialize}!dns.Message@{dns.Message}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily Byte\+Buffer dns.\+Message.\+serialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Serialize object to bytes. \begin{DoxyReturn}{Returns}
+Serialized bytes. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfacedns_1_1_protocol_object_a54412a59abc51937310fb6098fb4fd13}{dns.\+Protocol\+Object}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdns_1_1_message_a0de88a0caa9e25aa23d303e7292445b2_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/dns/Message.\+java\end{DoxyCompactItemize}

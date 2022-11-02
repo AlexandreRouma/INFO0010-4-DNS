@@ -1,0 +1,179 @@
+\hypertarget{classdns_1_1_question}{}\doxysection{dns.\+Question Class Reference}
+\label{classdns_1_1_question}\index{dns.Question@{dns.Question}}
+
+
+Inheritance diagram for dns.\+Question\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=188pt]{classdns_1_1_question__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for dns.\+Question\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdns_1_1_question__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdns_1_1_question_a07ed2a3a112bc883f8d584f060b9e016}{Question}} (\mbox{\hyperlink{classdns_1_1_name}{Name}} name, \mbox{\hyperlink{enumdns_1_1_record_type}{Record\+Type}} type, \mbox{\hyperlink{enumdns_1_1_address_class}{Address\+Class}} qclass)
+\item 
+\mbox{\hyperlink{classdns_1_1_question_a374ad7324816e118a19f7e0af3c23d7b}{Question}} (Byte\+Buffer msg\+Buf)  throws Exception 
+\item 
+Byte\+Buffer \mbox{\hyperlink{classdns_1_1_question_aee6e0021c117c2858e4efaa6a61de895}{serialize}} ()
+\item 
+void \mbox{\hyperlink{classdns_1_1_question_a0b43981e298914aa24dc67e96fc7676f}{deserialize}} (Byte\+Buffer msg\+Buf)  throws Exception 
+\item 
+int \mbox{\hyperlink{classdns_1_1_question_a9ad3cbc44ab4206de91765e7b0154275}{get\+Size}} ()
+\item 
+\mbox{\Hypertarget{classdns_1_1_question_a60800945b40594b6b556d8b25bac1d10}\label{classdns_1_1_question_a60800945b40594b6b556d8b25bac1d10}} 
+String {\bfseries to\+String} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdns_1_1_question_ad9c105544768dc7d79e7ae571b3abfa5}\label{classdns_1_1_question_ad9c105544768dc7d79e7ae571b3abfa5}} 
+\mbox{\hyperlink{classdns_1_1_name}{Name}} {\bfseries name} = null
+\item 
+\mbox{\Hypertarget{classdns_1_1_question_a95aa6636d8b5e84a3d6ab36047ca9183}\label{classdns_1_1_question_a95aa6636d8b5e84a3d6ab36047ca9183}} 
+\mbox{\hyperlink{enumdns_1_1_record_type}{Record\+Type}} {\bfseries type} = Record\+Type.\+A
+\item 
+\mbox{\Hypertarget{classdns_1_1_question_a6633cc02ef536f0b59108b7dfddfc116}\label{classdns_1_1_question_a6633cc02ef536f0b59108b7dfddfc116}} 
+\mbox{\hyperlink{enumdns_1_1_address_class}{Address\+Class}} {\bfseries qclass} = Address\+Class.\+IN
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+D\+NS \mbox{\hyperlink{classdns_1_1_question}{Question}}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdns_1_1_question_a07ed2a3a112bc883f8d584f060b9e016}\label{classdns_1_1_question_a07ed2a3a112bc883f8d584f060b9e016}} 
+\index{dns.Question@{dns.Question}!Question@{Question}}
+\index{Question@{Question}!dns.Question@{dns.Question}}
+\doxysubsubsection{\texorpdfstring{Question()}{Question()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily dns.\+Question.\+Question (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdns_1_1_name}{Name}}}]{name,  }\item[{\mbox{\hyperlink{enumdns_1_1_record_type}{Record\+Type}}}]{type,  }\item[{\mbox{\hyperlink{enumdns_1_1_address_class}{Address\+Class}}}]{qclass }\end{DoxyParamCaption})}
+
+Create \mbox{\hyperlink{classdns_1_1_question}{Question}}. 
+\begin{DoxyParams}{Parameters}
+{\em name} & Domain name. \\
+\hline
+{\em type} & \mbox{\hyperlink{classdns_1_1_question}{Question}} type. \\
+\hline
+{\em qclass} & Address class. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classdns_1_1_question_a374ad7324816e118a19f7e0af3c23d7b}\label{classdns_1_1_question_a374ad7324816e118a19f7e0af3c23d7b}} 
+\index{dns.Question@{dns.Question}!Question@{Question}}
+\index{Question@{Question}!dns.Question@{dns.Question}}
+\doxysubsubsection{\texorpdfstring{Question()}{Question()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily dns.\+Question.\+Question (\begin{DoxyParamCaption}\item[{Byte\+Buffer}]{msg\+Buf }\end{DoxyParamCaption}) throws Exception}
+
+Create \mbox{\hyperlink{classdns_1_1_question}{Question}} from serialized bytes. 
+\begin{DoxyParams}{Parameters}
+{\em msg\+Buf} & Serialized bytes. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & \\
+\hline
+\end{DoxyExceptions}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdns_1_1_question_a374ad7324816e118a19f7e0af3c23d7b_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdns_1_1_question_a0b43981e298914aa24dc67e96fc7676f}\label{classdns_1_1_question_a0b43981e298914aa24dc67e96fc7676f}} 
+\index{dns.Question@{dns.Question}!deserialize@{deserialize}}
+\index{deserialize@{deserialize}!dns.Question@{dns.Question}}
+\doxysubsubsection{\texorpdfstring{deserialize()}{deserialize()}}
+{\footnotesize\ttfamily void dns.\+Question.\+deserialize (\begin{DoxyParamCaption}\item[{Byte\+Buffer}]{buf }\end{DoxyParamCaption}) throws Exception}
+
+Deserialize object from bytes. 
+\begin{DoxyParams}{Parameters}
+{\em buf} & Serialized bytes. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interfacedns_1_1_protocol_object_af765cbed0f65314b696b5d09a4694aef}{dns.\+Protocol\+Object}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdns_1_1_question_a0b43981e298914aa24dc67e96fc7676f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdns_1_1_question_a0b43981e298914aa24dc67e96fc7676f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classdns_1_1_question_a9ad3cbc44ab4206de91765e7b0154275}\label{classdns_1_1_question_a9ad3cbc44ab4206de91765e7b0154275}} 
+\index{dns.Question@{dns.Question}!getSize@{getSize}}
+\index{getSize@{getSize}!dns.Question@{dns.Question}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily int dns.\+Question.\+get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get object size in bytes once serialized. \begin{DoxyReturn}{Returns}
+Object size in bytes. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfacedns_1_1_protocol_object_a2cb1b776546112bb4dec4faf1aca3eae}{dns.\+Protocol\+Object}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{classdns_1_1_question_a9ad3cbc44ab4206de91765e7b0154275_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdns_1_1_question_a9ad3cbc44ab4206de91765e7b0154275_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classdns_1_1_question_aee6e0021c117c2858e4efaa6a61de895}\label{classdns_1_1_question_aee6e0021c117c2858e4efaa6a61de895}} 
+\index{dns.Question@{dns.Question}!serialize@{serialize}}
+\index{serialize@{serialize}!dns.Question@{dns.Question}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily Byte\+Buffer dns.\+Question.\+serialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Serialize object to bytes. \begin{DoxyReturn}{Returns}
+Serialized bytes. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfacedns_1_1_protocol_object_a54412a59abc51937310fb6098fb4fd13}{dns.\+Protocol\+Object}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdns_1_1_question_aee6e0021c117c2858e4efaa6a61de895_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/dns/Question.\+java\end{DoxyCompactItemize}

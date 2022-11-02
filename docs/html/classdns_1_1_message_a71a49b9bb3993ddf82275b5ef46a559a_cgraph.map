@@ -1,0 +1,6 @@
+<map id="dns.Message.Message" name="dns.Message.Message">
+<area shape="rect" id="node1" title=" " alt="" coords="5,31,175,57"/>
+<area shape="rect" id="node2" href="$classdns_1_1_message.html#a5e72127dcd9d250ba6139afba6f946c9" title=" " alt="" coords="223,31,405,57"/>
+<area shape="rect" id="node3" href="$enumdns_1_1_opcode.html#a1cbf1469a1cdfdc5e7cfafd42492ab90" title=" " alt="" coords="477,5,622,32"/>
+<area shape="rect" id="node4" href="$enumdns_1_1_response_code.html#ae95e34fcb196cd93c73acbbd94bd0fb4" title=" " alt="" coords="453,56,645,83"/>
+</map>
