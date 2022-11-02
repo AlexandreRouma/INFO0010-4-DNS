@@ -44,7 +44,7 @@ public enum Type {
     }
 
     /**
-     * Get enum from n ame.
+     * Get enum from name.
      * @param id Name of enum.
      * @return Type enum.
      */
