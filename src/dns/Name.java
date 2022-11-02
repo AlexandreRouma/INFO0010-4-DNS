@@ -107,12 +107,8 @@ public class Name implements ProtocolObject {
      * @param name Dot-delimited domain name.
      */
     public void set(String name) {
-        String[] parts = name.split("\\.");
-
-        // TODO: Check validity
-
-        // TODO: Cleaner way?
         labels.clear();
+        String[] parts = name.split("\\.");
         for (String s : parts) { labels.add(s); }
     }
 

@@ -1,6 +1,5 @@
 import dns.*;
 
-import java.nio.ByteBuffer;
 import java.util.Vector;
 
 public class Client {
@@ -51,12 +50,5 @@ public class Client {
         catch (Exception e) {
             e.printStackTrace();
         }   
-    }
-
-    public static void dumpByteBuffer(ByteBuffer buf) {
-        for (byte b : buf.array()) {
-            System.out.printf("%02X ", b);
-        }
-        System.out.printf("\n");
     }
 }
