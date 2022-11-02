@@ -1,0 +1,209 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdftex 2022.11.1)  1 NOV 2022 22:46
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**./report/report.tex
+(report/report.tex
+! Undefined control sequence.
+l.1 \documentclass
+                  [a4paper]{article}
+? 
+! Undefined control sequence.
+l.2 \usepackage
+               [utf8]{inputenc}
+? 
+! Undefined control sequence.
+l.3 \usepackage
+               [T1]{fontenc}
+? 
+! Undefined control sequence.
+l.4 \usepackage
+               {natbib}
+? 
+! Undefined control sequence.
+l.5 \usepackage
+               {url}
+? 
+! Undefined control sequence.
+l.6 \usepackage
+               {hyperref}
+? 
+! Undefined control sequence.
+l.7 \usepackage
+               {enumitem}
+? 
+! Undefined control sequence.
+l.8 \usepackage
+               {ifthen}
+? 
+! Undefined control sequence.
+l.9 \usepackage
+               {fancyhdr}
+? 
+! Undefined control sequence.
+l.10 \usepackage
+                {csquotes}
+? 
+! Undefined control sequence.
+l.11 \usepackage
+                {color,colortbl}
+? 
+! Undefined control sequence.
+l.12 \usepackage
+                {lipsum}
+? 
+! Undefined control sequence.
+l.13 \usepackage
+                {xargs}
+? 
+! Undefined control sequence.
+l.14 \usepackage
+                [pdftex,dvipsnames]{xcolor}
+? 
+! Undefined control sequence.
+l.15 \usepackage
+                [margin=1in]{geometry}
+? 
+! Undefined control sequence.
+l.16 \usepackage
+                [version=3]{mhchem}
+? 
+! Undefined control sequence.
+l.17 \usepackage
+                {listings}
+? 
+! Undefined control sequence.
+l.18 \usepackage
+                [scaled]{helvet}
+? 
+! Undefined control sequence.
+l.19 \usepackage
+                [colorinlistoftodos,prependcaption,textsize=footnotesize]{to...
+
+? 
+
+Overfull \hbox (27.52377pt too wide) in paragraph at lines 1--20
+[]\tenrm [a4paper]article [utf8]inputenc [T1]fontenc nat-bib url hy-per-ref en-
+u-mitem ifthen fan-cy-hdr csquotes color,colortbl|
+
+\hbox(7.5+2.5)x469.75499, glue set - 1.0
+.\hbox(0.0+0.0)x20.0
+.\tenrm [
+.\tenrm a
+.\tenrm 4
+.\tenrm p
+.etc.
+
+
+Overfull \hbox (0.82936pt too wide) in paragraph at lines 1--20
+\tenrm lip-sum xargs [pdf-tex,dvipsnames]xcolor [mar-gin=1in]geometry [ver-sion
+=3]mhchem list-ings [scaled]helvet [col-|
+
+\hbox(7.5+2.5)x469.75499, glue set - 1.0
+.\tenrm l
+.\tenrm i
+.\tenrm p
+.\discretionary
+..\tenrm -
+.\tenrm s
+.etc.
+
+! Undefined control sequence.
+l.21 \usepackage
+                {amsmath, amssymb, amsfonts, amsthm}
+? 
+! Undefined control sequence.
+l.22 \usepackage
+                {array}
+? 
+! Undefined control sequence.
+l.23 \usepackage
+                {float}
+? 
+! Undefined control sequence.
+l.24 \usepackage
+                {version}
+? 
+! Undefined control sequence.
+l.25 \usepackage
+                {pdfpages}
+? 
+! Undefined control sequence.
+l.27 \usepackage
+                {attachfile}
+? 
+! Undefined control sequence.
+l.28 \usepackage
+                {comment}
+? 
+! Undefined control sequence.
+l.30 \usepackage
+                {tikz}
+? 
+! Undefined control sequence.
+l.31 \usetikzlibrary
+                    {positioning, shapes, calc}
+? 
+! Undefined control sequence.
+l.33 \renewcommand
+                  \familydefault{\sffdefault}
+? 
+! Undefined control sequence.
+l.33 \renewcommand\familydefault
+                                {\sffdefault}
+? 
+! Undefined control sequence.
+l.33 \renewcommand\familydefault{\sffdefault
+                                            }
+? 
+! I can't find file `customcolors'.
+l.35 \input{customcolors}
+                         
+(Press Enter to retry, or Control-C to exit)
+Please type another input file name: 
+! I can't find file `customcolors'.
+l.35 \input{customcolors}
+                         
+(Press Enter to retry, or Control-C to exit)
+Please type another input file name: 
+! I can't find file `customcolors'.
+l.35 \input{customcolors}
+                         
+(Press Enter to retry, or Control-C to exit)
+Please type another input file name: 
+! I can't find file `customcolors'.
+l.35 \input{customcolors}
+                         
+(Press Enter to retry, or Control-C to exit)
+Please type another input file name: 
+! I can't find file `customcolors'.
+l.35 \input{customcolors}
+                         
+(Press Enter to retry, or Control-C to exit)
+Please type another input file name: 
+! I can't find file `customcolors'.
+l.35 \input{customcolors}
+                         
+(Press Enter to retry, or Control-C to exit)
+Please type another input file name: 
+! I can't find file `customcolors'.
+l.35 \input{customcolors}
+                         
+(Press Enter to retry, or Control-C to exit)
+Please type another input file name: 
+! I can't find file `customcolors'.
+l.35 \input{customcolors}
+                         
+(Press Enter to retry, or Control-C to exit)
+Please type another input file name: 
+! I can't find file `customcolors'.
+l.35 \input{customcolors}
+                         
+(Press Enter to retry, or Control-C to exit)
+Please type another input file name: 
+! Emergency stop.
+l.35 
+     
+End of file on the terminal!
+
+!  ==> Fatal error occurred, no output PDF file produced!

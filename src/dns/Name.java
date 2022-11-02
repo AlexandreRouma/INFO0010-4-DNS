@@ -1,7 +1,14 @@
+package dns;
+
+import dns.exceptions.*;
+
 import java.nio.ByteBuffer;
 import java.util.Vector;
 
-public class Name implements EncodableDecodable {
+/**
+ * DNS Domain Name.
+ */
+public class Name implements ProtocolObject {
     /**
      * Create name from string.
      * @param name Dot delimited domain name.
@@ -15,14 +22,14 @@ public class Name implements EncodableDecodable {
      * @param msgBuf Buffer containing the entire message with its position at the name.
      */
     public Name(ByteBuffer msgBuf) throws Exception {
-        decode(msgBuf);
+        deserialize(msgBuf);
     }
 
     /**
      * Encode name to bytes
      * @return Buffer containing the encoded name
      */
-    public ByteBuffer encode() {
+    public ByteBuffer serialize() {
         ByteBuffer data = ByteBuffer.allocate(getSize());
 
         // Encode everything
@@ -39,11 +46,11 @@ public class Name implements EncodableDecodable {
      * Decode from bytes
      * @param msgBuf Buffer containing the entire message with its position at the name.
      */
-    public void decode(ByteBuffer msgBuf) throws Exception {
-        decode(msgBuf, false);
+    public void deserialize(ByteBuffer msgBuf) throws Exception {
+        deserialize(msgBuf, false);
     }
 
-    private void decode(ByteBuffer msgBuf, boolean parsingPtr) throws Exception {
+    private void deserialize(ByteBuffer msgBuf, boolean parsingPtr) throws Exception {
         // If not in the middle of parsing a pointer, clear labels
         if (!parsingPtr) { labels.clear(); }
 
@@ -52,7 +59,7 @@ public class Name implements EncodableDecodable {
             // If the label is a pointer, decode label being pointed at and return
             try {
                 Pointer ptr = new Pointer(msgBuf);
-                decode(ByteBuffer.wrap(msgBuf.array()).position(ptr.index), true);
+                deserialize((ByteBuffer)ByteBuffer.wrap(msgBuf.array()).position(ptr.index), true);
                 return;
             }
             catch (NotPointerException e) {}
@@ -63,7 +70,10 @@ public class Name implements EncodableDecodable {
             // If null, we're done
             if (len == 0) { return; }
 
-            // TODO: Check that the buffer still has enough data
+            // Check if enough data is left
+            if (msgBuf.remaining() < len) {
+                throw new InvalidMessageException("Not enough bytes to decode Name.");
+            }
             
             // Get label string
             labels.add(new String(msgBuf.array(), msgBuf.position(), len));
@@ -71,7 +81,23 @@ public class Name implements EncodableDecodable {
         }
 
         // If we exit the loop, it means we didn't get a null termination
-        throw new MissingNullTerminationException();
+        throw new InvalidMessageException("Name does not end with a null byte.");
+    }
+
+    /**
+     * Get size of the encoded buffer.
+     * @return Size in bytes.
+     */
+    public int getSize() {
+        // Start bytes and terminating null
+        int len = labels.size() + 1;
+
+        // Labels
+        for (String s : labels) {
+            len += s.length();
+        }
+
+        return len;
     }
 
     /**
@@ -98,22 +124,6 @@ public class Name implements EncodableDecodable {
             str += s + ".";
         }
         return str.substring(0, str.length() - 1);
-    }
-
-    /**
-     * Get size of the encoded buffer.
-     * @return Size in bytes.
-     */
-    public int getSize() {
-        // Start bytes and terminating null
-        int len = labels.size() + 1;
-
-        // Labels
-        for (String s : labels) {
-            len += s.length();
-        }
-
-        return len;
     }
 
     private Vector<String> labels = new Vector<String>();

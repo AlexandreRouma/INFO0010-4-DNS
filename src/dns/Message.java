@@ -1,15 +1,59 @@
+package dns;
+
+import dns.exceptions.*;
+
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.util.Vector;
 
-public class Message {
-    public Message() {}
+/**
+ * DNS Message
+ */
+public class Message implements ProtocolObject {
+    public short id = 0;
+    public Opcode opcode = Opcode.QUERY;
+    public boolean isResp = false;
+    public boolean isAuth = false;
+    public boolean isTruncated = false;
+    public boolean recurseDesired = false;
+    public boolean recurseAvailable = false;
+    public ResponseCode rcode = ResponseCode.SUCCESS;
+    public Vector<Question> questions = new Vector<Question>();
+    public Vector<ResourceRecord> answers = new Vector<ResourceRecord>();
 
-    public Message(ByteBuffer data) throws Exception {
-        decode(data);
+    /**
+     * Create a Client to Server message.
+     * @param opcode
+     */
+    public Message(Opcode opcode, short id, boolean recurseDesired, Vector<Question> questions) {
+        this.opcode = opcode;
+        this.id = id;
+        this.recurseDesired = recurseDesired;
+        this.questions.addAll(questions);
+    }
+    
+    /**
+     * Create a Server to Client message.
+     * @param rcode
+     */
+    public Message(ResponseCode rcode, short id, boolean isAuth, boolean isTruncated, boolean recurseAvailable) {
+        this.rcode = rcode;
+        this.id = id;
+        this.isAuth = isAuth;
+        this.isTruncated = isTruncated;
+        this.recurseAvailable = recurseAvailable;
     }
 
-    public ByteBuffer encode() {
+    /**
+     * Create a message from serialized bytes.
+     * @param data Serialized bytes.
+     * @throws Exception
+     */
+    public Message(ByteBuffer data) throws Exception {
+        deserialize(data);
+    }
+
+    public ByteBuffer serialize() {
         // Prepare buffer in big endian mode
         ByteBuffer data = ByteBuffer.allocate(getSize());
         data.order(ByteOrder.BIG_ENDIAN);
@@ -35,15 +79,15 @@ public class Message {
 
         // Encode questions
         for (Question q : questions) {
-            data.put(q.encode().array());
+            data.put(q.serialize().array());
         }
 
         return data;
     }
 
-    public void decode(ByteBuffer data) throws Exception {
-        if (data.capacity() < SIZE) {
-            throw new Exception("Invalid data length");
+    public void deserialize(ByteBuffer data) throws Exception {
+        if (data.capacity() < BASE_SIZE) {
+            throw new InvalidMessageException("Invalid data length.");
         }
         id = data.getShort();
         short flags = data.getShort();
@@ -71,26 +115,14 @@ public class Message {
 
     public int getSize() {
         // Base size
-        int size = SIZE;
+        int size = BASE_SIZE;
 
-        // Add the size of all records
+        // Add up the size of all records
         for (Question q : questions) { size += q.getSize(); }
         for (ResourceRecord a : answers) { size += a.getSize(); }
 
         return size;
     }
-    
-    public short id = 0;
-    public Opcode opcode = Opcode.QUERY;
-    public boolean isResp = false;
-    public boolean isAuth = false;
-    public boolean isTruncated = false;
-    public boolean recurseDesired = false;
-    public boolean recurseAvailable = false;
-    public ResponseCode rcode = ResponseCode.SUCCESS;
 
-    public Vector<Question> questions = new Vector<Question>();
-    public Vector<ResourceRecord> answers = new Vector<ResourceRecord>();
-
-    public static final int SIZE = 12;
+    private static final int BASE_SIZE = 12;
 }

@@ -3,4 +3,5 @@ BUILD_DIR=build
 
 # Compile
 mkdir -p $BUILD_DIR
-javac -d $BUILD_DIR src/*
+find src -name "*.java" > $BUILD_DIR/sources.txt
+javac -d $BUILD_DIR @$BUILD_DIR/sources.txt

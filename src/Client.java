@@ -1,3 +1,6 @@
+import dns.*;
+import dns.Class;
+
 import java.nio.ByteBuffer;
 import java.util.Vector;
 

@@ -1,23 +1,40 @@
+package dns;
+
 import java.nio.ByteBuffer;
 
-public class MX implements EncodableDecodable {
+/**
+ * DNS MX Record.
+ */
+public class MX implements ProtocolObject {
+    public short priority;
+    public Name name;
+
+    /**
+     * Create MX record.
+     * @param priority Record priority.
+     * @param name Domain name.
+     */
     public MX(short priority, Name name) {
         this.priority = priority;
         this.name = name;
     }
 
+    /**
+     * Create MX record from serialized bytes.
+     * @param msgBuf Serialized bytes.
+     */
     public MX(ByteBuffer msgBuf) throws Exception {
-        decode(msgBuf);
+        deserialize(msgBuf);
     }
 
-    public ByteBuffer encode() {
+    public ByteBuffer serialize() {
         ByteBuffer buf = ByteBuffer.allocate(getSize());
         buf.putShort(priority);
-        buf.put(name.encode());
+        buf.put(name.serialize());
         return buf;
     }
 
-    public void decode(ByteBuffer msgBuf) throws Exception {
+    public void deserialize(ByteBuffer msgBuf) throws Exception {
         priority = msgBuf.getShort();
         name = new Name(msgBuf);
     }
@@ -30,7 +47,5 @@ public class MX implements EncodableDecodable {
         return String.format("(PRIORITY=%d, NAME=%s)", priority, name);
     }
 
-    public short priority;
-    public Name name;
     private static final int SIZE = 2;
 }
